@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Julian SHOP - Thời Trang Thể Thao Cao Cấp</title>
+    <meta name="description" content="Khám phá bộ sưu tập thời trang thể thao Julian SHOP với công nghệ tiên tiến và thiết kế đột phá">
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * { font-family: 'Inter', sans-serif; }
+        .hero-gradient { background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #000000 100%); }
+        .text-gradient { background: linear-gradient(135deg, #ff6b35, #f7931e); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .card-hover { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+        .card-hover:hover { transform: translateY(-8px); box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); }
+        .parallax { transform: translateZ(0); }
+        .animate-float { animation: float 6s ease-in-out infinite; }
+        @keyframes float { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-20px); } }
+        .animate-pulse-slow { animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+        .product-card { transition: all 0.4s ease; }
+        .product-card:hover .product-image { transform: scale(1.05); }
+        .product-image { transition: transform 0.4s ease; }
+        .marquee { animation: marquee 30s linear infinite; }
+        @keyframes marquee { 0% { transform: translateX(100%); } 100% { transform: translateX(-100%); } }
+        .glass { backdrop-filter: blur(10px); background: rgba(255, 255, 255, 0.1); }
+        .btn-primary { background: linear-gradient(135deg, #ff6b35, #f7931e); transition: all 0.3s ease; }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 25px rgba(255, 107, 53, 0.4); }
+        .section-padding { padding: 6rem 0; }
+        .container { max-width: 1400px; margin: 0 auto; padding: 0 1.5rem; }
+    </style>
+</head>
+<body class="bg-white text-gray-900 overflow-x-hidden">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 glass border-b border-gray-200/20">
+        <div class="container">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center space-x-8">
+                    <div class="text-2xl font-black text-gradient">Julian SHOP</div>
+                    <div class="hidden md:flex space-x-6">
+                        <a href="#" class="text-gray-700 hover:text-orange-500 font-medium transition-colors">Sản phẩm</a>
+                        <a href="#" class="text-gray-700 hover:text-orange-500 font-medium transition-colors">Bộ sưu tập</a>
+                        <a href="#" class="text-gray-700 hover:text-orange-500 font-medium transition-colors">Về chúng tôi</a>
+                        <a href="#" class="text-gray-700 hover:text-orange-500 font-medium transition-colors">Liên hệ</a>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <button class="p-2 hover:bg-gray-100 rounded-full transition-colors">
+                        <i data-lucide="search" class="w-5 h-5"></i>
+                    </button>
+                    <button class="p-2 hover:bg-gray-100 rounded-full transition-colors">
+                        <i data-lucide="heart" class="w-5 h-5"></i>
+                    </button>
+                    <button class="p-2 hover:bg-gray-100 rounded-full transition-colors relative">
+                        <i data-lucide="shopping-bag" class="w-5 h-5"></i>
+                        <span class="absolute -top-1 -right-1 bg-orange-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">2</span>
+                    </button>
+                    <button class="p-2 hover:bg-gray-100 rounded-full transition-colors">
+                        <i data-lucide="user" class="w-5 h-5"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient min-h-screen flex items-center relative overflow-hidden">
+        <div class="absolute inset-0 opacity-20">
+            <svg class="w-full h-full" viewBox="0 0 1200 800" fill="none">
+                <path d="M0,400 Q300,200 600,400 T1200,400 V800 H0 Z" fill="url(#heroGradient)"/>
+                <defs>
+                    <linearGradient id="heroGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#ff6b35;stop-opacity:0.3"/>
+                        <stop offset="100%" style="stop-color:#f7931e;stop-opacity:0.1"/>
+                    </linearGradient>
+                </defs>
+            </svg>
+        </div>
+        <div class="container relative z-10">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="text-white">
+                    <div class="inline-block px-4 py-2 bg-orange-500/20 rounded-full text-orange-400 text-sm font-medium mb-6 animate-pulse-slow">
+                        🔥 Bộ sưu tập mới 2024
+                    </div>
+                    <h1 class="text-5xl lg:text-7xl font-black mb-6 leading-tight">
+                        Julian SHOP
+                        <span class="text-gradient block">Nơi bạn thỏa sức mua sắm</span>
+                    </h1>
+                    <p class="text-xl text-gray-300 mb-8 max-w-lg">
+                       Cảm ơn bạn đã ghé thăm Julian SHOP. Chúng tôi cam kết mang đến cho bạn những sản phẩm tốt nhất.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button class="btn-primary px-8 py-4 rounded-full text-white font-semibold text-lg">
+                            Khám phá ngay
+                        </button>
+                        <button class="border-2 border-white text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white hover:text-black transition-all">
+                            Xem video
+                        </button>
+                    </div>
+                </div>
+                <div class="relative animate-float">
+                    <div class="w-full h-96 bg-gradient-to-br from-orange-500/20 to-red-500/20 rounded-3xl flex items-center justify-center">
+                        <svg class="w-64 h-64 text-white/30" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2L13.09 8.26L22 9L13.09 9.74L12 16L10.91 9.74L2 9L10.91 8.26L12 2Z"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="section-padding bg-gray-50">
+        <div class="container">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl lg:text-5xl font-black mb-4">SẢN PHẨM NỔI BẬT</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Những sản phẩm được yêu thích nhất với công nghệ và thiết kế hàng đầu</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Product 1 -->
+                <div class="product-card bg-white rounded-2xl overflow-hidden shadow-lg card-hover">
+                    <div class="relative overflow-hidden">
+                        <div class="product-image w-full h-80 bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center">
+                            <svg class="w-32 h-32 text-blue-400" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M2 18h20v2H2v-2zM3.5 8L12 2l8.5 6v8h-17V8z"/>
+                            </svg>
+                        </div>
+                        <div class="absolute top-4 left-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            HOT
+                        </div>
+                        <div class="absolute top-4 right-4 p-2 bg-white/80 rounded-full hover:bg-white transition-colors cursor-pointer">
+                            <i data-lucide="heart" class="w-5 h-5"></i>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">VOLT Air Max Pro</h3>
+                        <p class="text-gray-600 mb-4">Giày chạy bộ với công nghệ đệm khí tiên tiến</p>
+                        <div class="flex items-center justify-between">
+                            <div class="text-2xl font-black text-orange-500">2.890.000₫</div>
+                            <button class="bg-black text-white px-6 py-2 rounded-full hover:bg-gray-800 transition-colors">
+                                Thêm vào giỏ
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card bg-white rounded-2xl overflow-hidden shadow-lg card-hover">
+                    <div class="relative overflow-hidden">
+                        <div class="product-image w-full h-80 bg-gradient-to-br from-green-100 to-green-200 flex items-center justify-center">
+                            <svg class="w-32 h-32 text-green-400" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                            </svg>
+                        </div>
+                        <div class="absolute top-4 left-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            NEW
+                        </div>
+                        <div class="absolute top-4 right-4 p-2 bg-white/80 rounded-full hover:bg-white transition-colors cursor-pointer">
+                            <i data-lucide="heart" class="w-5 h-5"></i>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">VOLT Training Elite</h3>
+                        <p class="text-gray-600 mb-4">Áo thun tập luyện với vải thấm hút mồ hôi</p>
+                        <div class="flex items-center justify-between">
+                            <div class="text-2xl font-black text-orange-500">1.290.000₫</div>
+                            <button class="bg-black text-white px-6 py-2 rounded-full hover:bg-gray-800 transition-colors">
+                                Thêm vào giỏ
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card bg-white rounded-2xl overflow-hidden shadow-lg card-hover">
+                    <div class="relative overflow-hidden">
+                        <div class="product-image w-full h-80 bg-gradient-to-br from-purple-100 to-purple-200 flex items-center justify-center">
+                            <svg class="w-32 h-32 text-purple-400" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                            </svg>
+                        </div>
+                        <div class="absolute top-4 left-4 bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            SALE
+                        </div>
+                        <div class="absolute top-4 right-4 p-2 bg-white/80 rounded-full hover:bg-white transition-colors cursor-pointer">
+                            <i data-lucide="heart" class="w-5 h-5"></i>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">VOLT Flex Shorts</h3>
+                        <p class="text-gray-600 mb-4">Quần short tập gym với độ co giãn tối ưu</p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-2">
+                                <div class="text-2xl font-black text-orange-500">890.000₫</div>
+                                <div class="text-lg text-gray-400 line-through">1.190.000₫</div>
+                            </div>
+                            <button class="bg-black text-white px-6 py-2 rounded-full hover:bg-gray-800 transition-colors">
+                                Thêm vào giỏ
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl lg:text-5xl font-black mb-4">DANH MỤC SẢN PHẨM</h2>
+                <p class="text-xl text-gray-600">Khám phá bộ sưu tập đa dạng cho mọi hoạt động thể thao</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="group relative overflow-hidden rounded-2xl h-80 card-hover cursor-pointer">
+                    <div class="absolute inset-0 bg-gradient-to-br from-red-500 to-orange-500"></div>
+                    <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors"></div>
+                    <div class="relative h-full flex flex-col justify-end p-6 text-white">
+                        <div class="mb-4">
+                            <i data-lucide="zap" class="w-12 h-12 mb-4"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2">GIÀY THỂ THAO</h3>
+                        <p class="text-white/80">Công nghệ đệm tiên tiến</p>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-2xl h-80 card-hover cursor-pointer">
+                    <div class="absolute inset-0 bg-gradient-to-br from-blue-500 to-cyan-500"></div>
+                    <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors"></div>
+                    <div class="relative h-full flex flex-col justify-end p-6 text-white">
+                        <div class="mb-4">
+                            <i data-lucide="shirt" class="w-12 h-12 mb-4"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2">ÁO THỂ THAO</h3>
+                        <p class="text-white/80">Vải thấm hút tối ưu</p>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-2xl h-80 card-hover cursor-pointer">
+                    <div class="absolute inset-0 bg-gradient-to-br from-green-500 to-teal-500"></div>
+                    <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors"></div>
+                    <div class="relative h-full flex flex-col justify-end p-6 text-white">
+                        <div class="mb-4">
+                            <i data-lucide="wind" class="w-12 h-12 mb-4"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2">QUẦN THỂ THAO</h3>
+                        <p class="text-white/80">Độ co giãn hoàn hảo</p>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-2xl h-80 card-hover cursor-pointer">
+                    <div class="absolute inset-0 bg-gradient-to-br from-purple-500 to-pink-500"></div>
+                    <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors"></div>
+                    <div class="relative h-full flex flex-col justify-end p-6 text-white">
+                        <div class="mb-4">
+                            <i data-lucide="star" class="w-12 h-12 mb-4"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2">PHỤ KIỆN</h3>
+                        <p class="text-white/80">Hoàn thiện phong cách</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Section -->
+    <section class="section-padding bg-black text-white">
+        <div class="container">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-4xl lg:text-5xl font-black mb-6">
+                        CÔNG NGHỆ
+                        <span class="text-gradient block">TIÊN TIẾN</span>
+                    </h2>
+                    <p class="text-xl text-gray-300 mb-8">
+                        Mỗi sản phẩm Julian được tích hợp những công nghệ đột phá nhất, mang đến trải nghiệm vượt trội cho người dùng.
+                    </p>
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="zap" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2">Julian Technology</h3>
+                                <p class="text-gray-300">Hệ thống đệm khí độc quyền giúp tăng cường hiệu suất và giảm chấn thương.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="droplets" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2">Moisture Control</h3>
+                                <p class="text-gray-300">Vải thông minh thấm hút mồ hôi và khô nhanh, giữ cơ thể luôn khô ráo.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="shield" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2">Durability Plus</h3>
+                                <p class="text-gray-300">Chất liệu bền bỉ, chống mài mòn và giữ form dáng lâu dài.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="w-full h-96 bg-gradient-to-br from-orange-500/20 to-red-500/20 rounded-3xl flex items-center justify-center animate-float">
+                        <svg class="w-48 h-48 text-orange-500/50" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="section-padding bg-gray-50">
+        <div class="container">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-4xl lg:text-5xl font-black mb-6">ĐĂNG KÝ NHẬN TIN</h2>
+                <p class="text-xl text-gray-600 mb-8">Cập nhật những sản phẩm mới nhất và ưu đãi độc quyền từ Julian</p>
+                <div class="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto">
+                    <input type="email" placeholder="Nhập email của bạn" class="flex-1 px-6 py-4 rounded-full border border-gray-300 focus:outline-none focus:border-orange-500">
+                    <button class="btn-primary px-8 py-4 rounded-full text-white font-semibold">
+                        Đăng ký
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white section-padding">
+        <div class="container">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <div class="text-3xl font-black text-gradient mb-6">Julian</div>
+                    <p class="text-gray-400 mb-6">Thương hiệu thời trang thể thao hàng đầu với công nghệ tiên tiến và thiết kế đột phá.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-orange-500 transition-colors">
+                            <i data-lucide="facebook" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-orange-500 transition-colors">
+                            <i data-lucide="instagram" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-orange-500 transition-colors">
+                            <i data-lucide="twitter" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Sản phẩm</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">Giày thể thao</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Áo thể thao</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Quần thể thao</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Phụ kiện</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Hỗ trợ</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">Liên hệ</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Hướng dẫn mua hàng</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Chính sách đổi trả</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Bảo hành</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Thông tin</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">Về chúng tôi</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Tin tức</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Tuyển dụng</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Điều khoản</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Julian. Tất cả quyền được bảo lưu.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Sidebar -->
+    <div id="cartSidebar" class="fixed right-0 top-0 h-full w-96 bg-white shadow-2xl transform translate-x-full transition-transform duration-300 z-50">
+        <div class="p-6 border-b">
+            <div class="flex items-center justify-between">
+                <h2 class="text-xl font-bold">Giỏ hàng (2)</h2>
+                <button onclick="toggleCart()" class="p-2 hover:bg-gray-100 rounded-full">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+        </div>
+        <div class="p-6 flex-1 overflow-y-auto">
+            <div class="space-y-4">
+                <div class="flex items-center space-x-4 p-4 border rounded-lg">
+                    <div class="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center">
+                        <svg class="w-8 h-8 text-blue-400" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M2 18h20v2H2v-2zM3.5 8L12 2l8.5 6v8h-17V8z"/>
+                        </svg>
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="font-semibold">VOLT Air Max Pro</h3>
+                        <p class="text-gray-600 text-sm">Size: 42</p>
+                        <p class="font-bold text-orange-500">2.890.000₫</p>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <button class="w-8 h-8 border rounded-full flex items-center justify-center">-</button>
+                        <span>1</span>
+                        <button class="w-8 h-8 border rounded-full flex items-center justify-center">+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="p-6 border-t">
+            <div class="flex items-center justify-between mb-4">
+                <span class="text-lg font-bold">Tổng cộng:</span>
+                <span class="text-2xl font-black text-orange-500">2.890.000₫</span>
+            </div>
+            <button class="w-full btn-primary py-4 rounded-full text-white font-semibold text-lg">
+                Thanh toán
+            </button>
+        </div>
+    </div>
+
+    <!-- Overlay -->
+    <div id="overlay" class="fixed inset-0 bg-black/50 opacity-0 invisible transition-all duration-300 z-40"></div>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Cart functionality
+        function toggleCart() {
+            const sidebar = document.getElementById('cartSidebar');
+            const overlay = document.getElementById('overlay');
+            
+            if (sidebar.classList.contains('translate-x-full')) {
+                sidebar.classList.remove('translate-x-full');
+                overlay.classList.remove('opacity-0', 'invisible');
+            } else {
+                sidebar.classList.add('translate-x-full');
+                overlay.classList.add('opacity-0', 'invisible');
+            }
+        }
+
+        // Close cart when clicking overlay
+        document.getElementById('overlay').addEventListener('click', toggleCart);
+
+        // Shopping bag click handler
+        document.querySelector('[data-lucide="shopping-bag"]').parentElement.addEventListener('click', toggleCart);
+
+        // Smooth scrolling for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add to cart functionality
+        document.querySelectorAll('button:contains("Thêm vào giỏ")').forEach(button => {
+            button.addEventListener('click', function() {
+                // Add ripple effect
+                const ripple = document.createElement('span');
+                ripple.classList.add('absolute', 'bg-white/30', 'rounded-full', 'animate-ping');
+                ripple.style.width = ripple.style.height = '20px';
+                ripple.style.left = ripple.style.top = '50%';
+                ripple.style.transform = 'translate(-50%, -50%)';
+                
+                this.style.position = 'relative';
+                this.appendChild(ripple);
+                
+                setTimeout(() => ripple.remove(), 600);
+                
+                // Show success message
+                const toast = document.createElement('div');
+                toast.className = 'fixed top-20 right-4 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg z-50 transform translate-x-full transition-transform';
+                toast.textContent = 'Đã thêm vào giỏ hàng!';
+                document.body.appendChild(toast);
+                
+                setTimeout(() => toast.classList.remove('translate-x-full'), 100);
+                setTimeout(() => {
+                    toast.classList.add('translate-x-full');
+                    setTimeout(() => toast.remove(), 300);
+                }, 2000);
+            });
+        });
+
+        // Newsletter subscription
+        document.querySelector('button:contains("Đăng ký")').addEventListener('click', function() {
+            const email = this.previousElementSibling.value;
+            if (email) {
+                const toast = document.createElement('div');
+                toast.className = 'fixed top-20 right-4 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg z-50 transform translate-x-full transition-transform';
+                toast.textContent = 'Đăng ký thành công!';
+                document.body.appendChild(toast);
+                
+                setTimeout(() => toast.classList.remove('translate-x-full'), 100);
+                setTimeout(() => {
+                    toast.classList.add('translate-x-full');
+                    setTimeout(() => toast.remove(), 300);
+                }, 2000);
+                
+                this.previousElementSibling.value = '';
+            }
+        });
+
+        // Parallax effect on scroll
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const parallaxElements = document.querySelectorAll('.parallax');
+            
+            parallaxElements.forEach(element => {
+                const speed = 0.5;
+                element.style.transform = `translateY(${scrolled * speed}px)`;
+            });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in-up');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all cards and sections
+        document.querySelectorAll('.card-hover, .product-card').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'97835dbba0ee04db',t:'MTc1NjcxNTAxMi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
